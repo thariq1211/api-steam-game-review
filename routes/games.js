@@ -194,7 +194,6 @@ router.get("/getDetails/:game", async (req, res) => {
     const result = await getGameInfo(req.params.game);
     res.send({ message: "sukses", data: result });
   } catch (error) {
-    console.log(error);
     res.send({ message: "null", error: error.message });
   }
 });
